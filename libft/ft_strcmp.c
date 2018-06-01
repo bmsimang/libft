@@ -6,11 +6,11 @@
 /*   By: jrameau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/23 03:51:36 by jrameau           #+#    #+#             */
-/*   Updated: 2018/05/30 16:20:46 by bmsimang         ###   ########.fr       */
+/*   Updated: 2018/06/01 16:23:20 by bmsimang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int		ft_strcmp(const char *s1, const char *s2)
 {
