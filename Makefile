@@ -6,30 +6,26 @@
 #    By: bmsimang <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/31 11:22:49 by bmsimang          #+#    #+#              #
-#    Updated: 2018/05/31 11:46:01 by bmsimang         ###   ########.fr        #
+#    Updated: 2018/06/04 11:48:29 by bmsimang         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-Name = libft.a
-
-CFLAG = -Wall -Wextra -Werror
-
-OBJ  = *.c
-
-SRC = *.o
+NAME = libft.a
+SRC = *.c
+OBJ = *.o
+HEADER = libft.h
+FLAGS = -Wall -Wextra -Werror -I
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+$(NAME):
+	gcc $(FLAGS) $(HEADER) $(SRC)
+	ar -rc $(NAME) $(OBJ)
 
-$(OBJ):
-	gcc $(CFLAG) -c $*.c
 clean:
-	rm -f $(OBJ)
+	rm -rf $(OBJ)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -rf $(NAME)
 
 re: fclean all

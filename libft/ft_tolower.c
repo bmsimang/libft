@@ -6,14 +6,16 @@
 /*   By: bmsimang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/30 16:41:18 by bmsimang          #+#    #+#             */
-/*   Updated: 2018/06/01 16:48:57 by bmsimang         ###   ########.fr       */
+/*   Updated: 2018/06/04 12:21:03 by bmsimang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
-#include <string.h>
-#include <stdlib.h>
+//#include <unistd.h>
+//#include <string.h>
+//#include <stdlib.h>
+
+//#include "libft.h"
 
 int		ft_tolower(int c)
 {
@@ -22,7 +24,7 @@ int		ft_tolower(int c)
 	return (c);
 }
 
-int main(void)
+/*int main(void)
 {
     char str[] = "HelloWorld";
 
@@ -30,4 +32,4 @@ int main(void)
     // It is initialized with the text, but that text can be changed.
     ft_tolower(str);
     return 0;
-}
+}*/

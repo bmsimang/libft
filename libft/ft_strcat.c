@@ -6,7 +6,7 @@
 /*   By: bmsimang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/30 16:18:21 by bmsimang          #+#    #+#             */
-/*   Updated: 2018/06/01 16:22:25 by bmsimang         ###   ########.fr       */
+/*   Updated: 2018/06/04 11:56:33 by bmsimang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strcat(char *s1, const char *s2)
 	int			j;
 
 	i = -1;
-	j = (int)ft_strlen(s1);
+	j = (int ft_strlen(s1));
 	while (*(s2 + ++i))
 		*(s1 + j++) = *(s2 + i);
 	*(s1 + j) = '\0';

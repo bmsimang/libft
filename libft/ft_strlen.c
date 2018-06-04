@@ -6,18 +6,17 @@
 /*   By: bmsimang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/30 16:35:47 by bmsimang          #+#    #+#             */
-/*   Updated: 2018/05/30 16:35:50 by bmsimang         ###   ########.fr       */
+/*   Updated: 2018/06/04 12:02:42 by bmsimang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 size_t		ft_strlen(const char *s)
 {
 	size_t		i;
 
 	i = -1;
-	while (*(s + ++i))
-		;
+	while (*(s + ++i));
 	return (i);
 }
