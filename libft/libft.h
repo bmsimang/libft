@@ -6,13 +6,12 @@
 /*   By: bmsimang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/01 09:56:22 by bmsimang          #+#    #+#             */
-/*   Updated: 2018/06/04 12:06:27 by bmsimang         ###   ########.fr       */
+/*   Updated: 2018/06/04 15:36:56 by bmsimang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# define BUFF_SIZE 20
 
 # include <string.h>
 # include <stdlib.h>

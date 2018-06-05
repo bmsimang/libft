@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmsimang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/30 15:57:27 by bmsimang          #+#    #+#             */
-/*   Updated: 2018/06/04 11:36:15 by bmsimang         ###   ########.fr       */
+/*   Created: 2018/05/21 08:44:30 by bmsimang          #+#    #+#             */
+/*   Updated: 2018/06/05 12:44:45 by bmsimang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,23 @@
 
 int		ft_atoi(const char *str)
 {
-	int		i;
+	long	i;
 	int		num;
-	int		sign;
 
 	i = 0;
-	num = 0;
-	sign = 1;
-	while (*(str + i) == '\n' || *(str + i) == '\t' || *(str + i) == '\r' || *(str + i) == '\v' || *(str + i) == '\f' || *(str + i) == ' ')
-		i++;
-	if (*(str + i) == '-')
-		sign = -1;
-	if (*(str + i) == '-' || *(str + i) == '+')
-		i++;
-	while (*(str + i) && *(str + i) >= '0' && *(str + i) <= '9')
-		num = num * 10 + (*(str + i++) - '0');
-	return (num * sign);
+	while ((*str >= '\t' && *str <= '\r') || (*str == 32))
+		str++;
+	if (*str == '-')
+		num = -1;
+	else
+		num = 1;
+	if (*str == '-' || *str == '+')
+		str++;
+	while (*str && ft_isdigit(*str))
+		i = (i * 10) + (*str++ - '0');
+	if (i < 0 && num == 1)
+		return (-1);
+	if (i < 0)
+		return (0);
+	return (i * num);
 }
