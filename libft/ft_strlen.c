@@ -6,7 +6,7 @@
 /*   By: bmsimang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/30 16:35:47 by bmsimang          #+#    #+#             */
-/*   Updated: 2018/06/04 15:20:12 by bmsimang         ###   ########.fr       */
+/*   Updated: 2018/06/05 13:52:08 by bmsimang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 size_t		ft_strlen(const char *s)
 {
-	size_t		i;
+	size_t	i;
 
-	i = -1;
-	while (*(s + ++i));
+	i = 0;
+	while (s[i])
+		++i;
 	return (i);
 }

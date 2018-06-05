@@ -6,7 +6,7 @@
 /*   By: bmsimang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/01 09:56:22 by bmsimang          #+#    #+#             */
-/*   Updated: 2018/06/04 15:36:56 by bmsimang         ###   ########.fr       */
+/*   Updated: 2018/06/05 13:59:05 by bmsimang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-//part1
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
 int		ft_isalnum(int c);
@@ -48,11 +47,7 @@ char	*ft_strstr(const char *big, const char *little);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 char	*ft_strnew(size_t size);
-
 int		ft_islower(int c);
 int		ft_isupper(int c);
-
-
-//part2
 
 #endif

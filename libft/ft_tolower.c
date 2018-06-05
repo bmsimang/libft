@@ -6,11 +6,12 @@
 /*   By: bmsimang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/30 16:41:18 by bmsimang          #+#    #+#             */
-/*   Updated: 2018/06/04 16:04:10 by bmsimang         ###   ########.fr       */
+/*   Updated: 2018/06/05 13:13:53 by bmsimang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 int		ft_tolower(int c)
 {
 	if (ft_isupper(c))
