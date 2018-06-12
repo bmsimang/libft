@@ -5,53 +5,47 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmsimang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/08 16:07:22 by bmsimang          #+#    #+#             */
-/*   Updated: 2018/06/11 15:44:06 by bmsimang         ###   ########.fr       */
+/*   Created: 2018/06/12 12:58:44 by bmsimang          #+#    #+#             */
+/*   Updated: 2018/06/12 16:35:44 by bmsimang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		get_word_len(char const *str, char c)
-{
-	int	i;
-	int	len;
-
-	i = 0;
-	len = 0;
-	while (str[i] == c)
-		i++;
-	while (str[i] != c && str[i] != '\0')
-	{
-		i++;
-		len++;
-	}
-	return (len);
-}
-
-char			**ft_strsplit(char const *s, char c)
+static size_t	str_len(char const *s, char c)
 {
 	int		i;
-	int		j;
-	int		k;
-	char	**str2;
+	int		l;
 
-	if (!s || !(str2 = (char **)malloc(sizeof(*str2) *
-		(ft_countwords(s, c) + 1))))
-		return (NULL);
 	i = -1;
-	j = 0;
-	while (++i < ft_countwords(s, c))
+	l = 0;
+	while (s[++i])
 	{
-		k = 0;
-		if (!(str2[i] = ft_strnew(get_word_len(&s[j], c) + 1)))
-			str2[i] = NULL;
-		while (s[j] == c)
-			j++;
-		while (s[j] != c && s[j])
-			str2[i][k++] = s[j++];
-		str2[i][k] = '\0';
+		if (s[i] != c)
+			i++;
 	}
-	str2[i] = 0;
-	return (str2);
+	return (l);
 }
+
+static size_t	w_l(const char *s, char c)
+{
+	int		j;
+
+	j = 0;
+	while (*s++ && *s != c)
+		j++;
+	return ((size_t)j);
+}
+
+char		**ft_strsplit(char const *s, char c)
+{
+	char	**arr;
+	int		k;
+	int		r;
+
+	r = -1;
+	if (!s || !(arr = (char**(malloc(sizeof(*arr) * (str_len(s, c) + 1))))
+		return (NULL);
+	while (*s)
+	{
+
